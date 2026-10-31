@@ -1,7 +1,7 @@
 # Declaración de uso de IA · U04.E07
 
 **Estudiante:** Johanna Joaquín · INF-8239 Ciencia de Datos II · UASD
-*Borrador preparado con ayuda de IA. Debo revisarlo y ajustarlo a lo que realmente hice antes de entregarlo.*
+
 
 ## Herramienta y finalidad
 
