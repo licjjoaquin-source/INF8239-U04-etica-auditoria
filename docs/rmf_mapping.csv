@@ -1,0 +1,13 @@
+function,activity,evidence_file,status,note
+GOVERN,Un único Accountable y responsables por actividad,student_inputs/raci.csv,documentado,El RACI existe; no se ha probado que funcione en una crisis
+GOVERN,Política de usos prohibidos y puertas de calidad,configs/governance.yml,documentado,Control documental; sin barrera técnica contra el mal uso
+GOVERN,"Obligación legal, marco voluntario y recomendación ética separados",docs/MARCO_NORMATIVO.md,documentado,Interpretación de la autora; no es asesoría legal
+MAP,"Finalidad, usuarios, población afectada y alternativa no predictiva",student_inputs/lab11_impact.yml,documentado,La alternativa no predictiva no se ha comparado todavía
+MAP,"Interesados, beneficios y daños",student_inputs/stakeholders.csv,documentado,Sin consulta real a representantes de afectados
+MAP,Registro de riesgos con responsables y evidencia,student_inputs/risk_register.csv,documentado,"Probabilidad e impacto son juicios, no mediciones"
+MEASURE,Métricas globales y por grupo,reports/lab12/logistic/fairness_by_group.csv,documentado,Cifras de Fairlearn conciliadas con la auditoría ampliada
+MEASURE,"Incertidumbre, soporte e interseccionalidad",reports/e07/variants_summary.csv,documentado,IC por bootstrap; la mayoría de las celdas interseccionales no tiene soporte
+MEASURE,Chequeo de variables proxy,reports/e07/proxy_check.csv,parcial,Señal débil; 640 filas no permiten descartar un proxy
+MANAGE,"Decisión, trade-offs y condición de retiro",reports/lab11/DECISION_RECORD.md,documentado,Condición de retiro definida; no hay monitoreo en operación
+MANAGE,Respuesta a incidentes,docs/RUNBOOK.md,pendiente,Se completa en LAB13
+MANAGE,Apelación y supervisión humana,student_inputs/lab11_impact.yml,documentado,Definidas en el papel; no probadas en operación

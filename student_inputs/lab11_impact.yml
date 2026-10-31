@@ -1,0 +1,9 @@
+purpose: Priorizar casos sintéticos de riesgo territorial para que una persona los revise primero. El sistema ordena la atención de revisión; no decide qué ocurre con el caso.
+assisted_decision: En qué orden un analista humano revisa los casos de la cola. La decisión final sobre cada caso es siempre humana.
+users: Operadores y analistas de revisión territorial (rol Operator en el RACI).
+affected_population: Las personas y territorios que representa cada caso (en este proyecto, casos sintéticos), con atención a los grupos G1 y G2 y a las bandas de edad.
+owner: Institutional Owner, como único responsable final (Accountable). El Product Owner responde por validación y despliegue.
+non_predictive_alternative: Revisar la cola en orden de llegada (cronológico) o con una regla simple y transparente basada en incidentes previos. El modelo solo se justifica si supera a esa alternativa en recall sin ampliar las brechas entre grupos; esa comparación aún no se ha hecho.
+out_of_scope_use: Intervención automática, decisión de elegibilidad, declaración de emergencia, perfilamiento operativo o inferencias sobre poblaciones reales (ver configs/governance.yml y docs/DATASET_CARD.md).
+withdrawal_condition: Volver a revisión manual si, en una ventana de monitoreo con soporte suficiente (al menos 20 casos, 10 positivos y 10 negativos por grupo), la brecha de recall o de FPR supera 0.16, el recall global cae por debajo de 0.68, o se detecta un uso fuera de alcance.
+appeal_mechanism: Toda persona afectada o su representante puede pedir revisión humana de su priorización. El Product Owner responde por escrito en un plazo propuesto de 10 días hábiles y deja registro; la respuesta explica el motivo de la priorización.
