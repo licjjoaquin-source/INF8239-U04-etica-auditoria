@@ -3,3 +3,12 @@ Data quality,Data Engineer,Product Owner,Data Scientist,Affected representatives
 Model validation,Data Scientist,Product Owner,Data Engineer,Affected representatives
 Deployment,ML Engineer,Product Owner,Data Scientist,Users
 Incident response,ML Engineer,Institutional Owner,Legal and Data Scientist,Affected representatives
+Data inventory and minimization,Data Engineer,Institutional Owner,Legal and Data Scientist,Product Owner
+Retention and deletion,Data Engineer,Institutional Owner,Legal,Product Owner
+Fairness audit,Data Scientist,Product Owner,Affected representatives,Institutional Owner
+Model Card and Dataset Card upkeep,Data Scientist,Product Owner,ML Engineer and Data Engineer,Institutional Owner
+Monitoring,ML Engineer,Product Owner,Data Scientist and Data Engineer,Operator
+Human review of recommendations,Operator,Product Owner,Data Scientist,Affected representatives
+Appeal handling,Operator,Institutional Owner,Legal,Affected representatives
+Communication to affected parties,Product Owner,Institutional Owner,Legal,Affected representatives
+Rollback to safe baseline,ML Engineer,Institutional Owner,Data Scientist and Operator,Users

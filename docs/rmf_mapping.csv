@@ -9,5 +9,11 @@ MEASURE,Métricas globales y por grupo,reports/lab12/logistic/fairness_by_group.
 MEASURE,"Incertidumbre, soporte e interseccionalidad",reports/e07/variants_summary.csv,documentado,IC por bootstrap; la mayoría de las celdas interseccionales no tiene soporte
 MEASURE,Chequeo de variables proxy,reports/e07/proxy_check.csv,parcial,Señal débil; 640 filas no permiten descartar un proxy
 MANAGE,"Decisión, trade-offs y condición de retiro",reports/lab11/DECISION_RECORD.md,documentado,Condición de retiro definida; no hay monitoreo en operación
-MANAGE,Respuesta a incidentes,docs/RUNBOOK.md,pendiente,Se completa en LAB13
+MANAGE,Respuesta a incidentes,docs/RUNBOOK.md,documentado,Runbook de seis pasos probado una vez en simulacro con una falla inyectada; no se ha probado con una falla parcial ni con las personas reales de cada rol
 MANAGE,Apelación y supervisión humana,student_inputs/lab11_impact.yml,documentado,Definidas en el papel; no probadas en operación
+GOVERN,"Inventario de datos, minimización y retención",docs/INVENTARIO_DATOS.csv,documentado,Plazos propuestos por la autora; no contrastados con asesoría jurídica
+GOVERN,Traspasos entre roles con criterio de aceptación,docs/HANDOFFS.csv,documentado,Cada traspaso cita una prueba o un archivo de evidencia
+MAP,Datasheet del dataset con cifras trazables,docs/DATASET_CARD.md,documentado,El mecanismo generador del dataset sintético no está documentado
+MEASURE,"Plan de monitoreo con dueño, umbral y soporte",configs/monitoring.yml,documentado,Umbrales de deriva son una regla práctica; recalibrar con datos reales
+MANAGE,"Model Card con límites, supervisión humana y apelación",docs/MODEL_CARD.md,documentado,Registro de operador y de apelaciones aún no implementados
+MANAGE,Simulacro de incidente con postmortem,reports/lab13/INCIDENT_POSTMORTEM.md,documentado,Falla inyectada y obvia; humanos ensayados como borradores

@@ -28,7 +28,7 @@ Límites de lo verificado:
 - Ningún grupo se interpreta sin soporte mínimo (20 casos, 10 positivos y 10 negativos) y toda brecha se reporta con intervalo.
 - No se usa el puntaje para elegibilidad, intervención automática ni declaración de emergencia.
 - La edad se retira de los predictores y se conserva solo para auditar, por minimización aunque ninguna norma lo exija.
-- Existe una vía de apelación con respuesta humana en un plazo propuesto de 10 días hábiles. Ese plazo es mío; no proviene de ninguna ley.
+- Existe una vía de apelación con respuesta humana en un plazo propuesto de 10 días hábiles. Ese plazo lo elegí yo para apelar una priorización y no lo exige ninguna norma. Coincide con los 10 días hábiles que el art. 8 de la Ley 172-13 fija, según el texto consultado, para atender reclamos de rectificación, actualización o supresión de datos; es una analogía, no un plazo legal para apelar un puntaje.
 - Una brecha observada obliga a investigar; no se presenta como prueba de discriminación causal ni como prueba de justicia.
 
 ## Resumen de la separación
@@ -38,3 +38,14 @@ Límites de lo verificado:
 | Protección de datos personales | Ley 172-13 | NIST, OECD | Minimización de atributos sensibles |
 | Equidad entre grupos | No hay norma específica de IA vigente | NIST MEASURE, Fairlearn | Tolerancia de 0.16 y soporte mínimo |
 | Supervisión humana y apelación | No exigida expresamente para sistemas de IA | NIST MANAGE, OCDE | Revisión obligatoria y plazo de respuesta |
+
+## 4. Conservación, minimización y monitoreo (E08)
+
+| Tema | Obligación legal (Ley 172-13, texto consultado el 31/10/2026) | Marco voluntario | Recomendación ética (propia) |
+|---|---|---|---|
+| Conservación y eliminación | Acceso del titular (art. 5.2 d); cancelación y supresión a solicitud, respuesta en 10 días hábiles (arts. 6.5, 8 y 14); bloqueo durante la prescripción y supresión después (art. 15). No encontré un principio explícito que limite el plazo de conservación a la finalidad. | NIST AI RMF (GOVERN, MAP); Datasheets (mantenimiento) | Plazos cortos de `docs/RETENCION.md`; evidencia de incidentes con hashes |
+| Seguridad | Medidas técnicas y organizativas (art. 5.5); conservar la información sin riesgo de adulteración (art. 13.2) | NIST AI RMF (MANAGE) | Manifiesto SHA-256 de la evidencia; acceso por rol |
+| Estadística o investigación | Los datos sensibles pueden tratarse con fines estadísticos o científicos si no se puede identificar a sus titulares (art. 75, último párrafo); art. 72 excluye datos no atribuibles a una persona | OCDE: transparencia | Reportar solo agregados con soporte mínimo |
+| Monitoreo y respuesta a incidentes | El texto consultado no trae una obligación de monitoreo de sistemas de IA ni de notificar incidentes de IA | NIST AI RMF (MEASURE y MANAGE); Model Cards | `configs/monitoring.yml`, `docs/RUNBOOK.md` y simulacro |
+
+El texto web consultado terminaba en el art. 83; los artículos posteriores no pude leerlos. Esta tabla es mi interpretación académica y no es asesoría legal.
