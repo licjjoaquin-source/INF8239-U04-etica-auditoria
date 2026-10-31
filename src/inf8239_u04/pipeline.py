@@ -5,9 +5,9 @@ from .fairness import audit, gap
 from .governance import deployment_decision
 from .model import build_model, fit_measure
 
-def run(df, gates, kind="logistic"):
-    train,test=temporal_split(df); model=build_model(kind); resources=fit_measure(model,features(train),train.target)
-    start=time.perf_counter(); pred=model.predict(features(test)); resources["latency_ms"]=(time.perf_counter()-start)*1000/len(test)
+def run(df, gates, kind="logistic", drop=(), output="models/model.joblib"):
+    train,test=temporal_split(df); model=build_model(kind,drop); resources=fit_measure(model,features(train,drop),train.target,output)
+    start=time.perf_counter(); pred=model.predict(features(test,drop)); resources["latency_ms"]=(time.perf_counter()-start)*1000/len(test)
     overall,by_group,_=audit(test.target,pred,test.protected_group)
     metrics={"accuracy":float(accuracy_score(test.target,pred)),"recall":float(recall_score(test.target,pred,zero_division=0))}
     gaps={"recall_gap":gap(by_group,"recall"),"fpr_gap":gap(by_group,"fpr")}

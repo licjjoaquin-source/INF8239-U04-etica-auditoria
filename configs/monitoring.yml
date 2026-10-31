@@ -1,0 +1,87 @@
+# Plan de monitoreo del DSS (E08 / LAB13). Cada señal tiene dueño, umbral, gravedad y paso del runbook.
+# Los umbrales de rendimiento y equidad NO se duplican aquí: salen de configs/governance.yml (gates).
+# Los umbrales de deriva son una regla práctica habitual (PSI 0.10 / 0.25), no un estándar; son una propuesta
+# de la autora que debe recalibrarse con datos reales.
+version: 1
+system: Territorial Review DSS - Synthetic
+selected_model: logistic_sin_age
+cadence: "Una evaluación por cada lote nuevo de casos (semanal en un piloto) y tras cada cambio del modelo o de la fuente de datos."
+reference: "Partición de entrenamiento (primeros 75 % por fecha). La ventana actual se compara contra ella."
+labels_note: "La etiqueta (target) existe solo después de la revisión humana: el rendimiento se mide con retraso y con casos acumulados; la deriva de datos se mide de inmediato."
+window_min_cases: 40
+support:
+  min_n: 20
+  min_positives: 10
+  min_negatives: 10
+signals:
+  data_contract:
+    owner: Data Engineer
+    severity: STOP
+    runbook_step: 2
+    rule: "Una columna requerida ausente, un target no binario o un identificador directo (name, document_number, email, phone) detiene el sistema antes de predecir."
+    action: "Detener predicciones, conservar el lote rechazado y avisar al Institutional Owner."
+  drift_psi:
+    owner: ML Engineer
+    watch: 0.10
+    alert: 0.25
+    alert_severity: REVIEW
+    bins: 5
+    numeric: [previous_incidents, infrastructure_score, exposure]
+    categorical: [zone]
+    runbook_step: 1
+    action: "Con ALERT pasar a REVIEW: la persona responsable decide si el puntaje sigue siendo utilizable; investigar la fuente."
+  zero_share_shift:
+    owner: Data Engineer
+    feature: previous_incidents
+    alert: 0.15
+    alert_severity: REVIEW
+    runbook_step: 1
+    action: "Un campo que de pronto llega en cero indica una falla de la fuente; pasar a REVIEW y contrastar con el sistema origen."
+  recall:
+    owner: Data Scientist
+    min_positives: 10
+    severity: REVIEW
+    runbook_step: 1
+    action: "Si el recall acumulado baja del mínimo del gate, REVIEW y revisión del umbral y los datos."
+  recall_gap:
+    owner: Data Scientist
+    severity: REVIEW
+    runbook_step: 1
+    action: "Brecha de recall fuera de tolerancia con soporte suficiente: REVIEW; sin soporte suficiente: SIN_EVIDENCIA (cuenta como WATCH)."
+  fpr_gap:
+    owner: Data Scientist
+    severity: REVIEW
+    runbook_step: 1
+    action: "Brecha de FPR fuera de tolerancia con soporte suficiente: REVIEW; sin soporte suficiente: SIN_EVIDENCIA (cuenta como WATCH)."
+  latency:
+    owner: ML Engineer
+    severity: REVIEW
+    runbook_step: 1
+    action: "Latencia por caso fuera del gate."
+  model_size:
+    owner: ML Engineer
+    severity: REVIEW
+    runbook_step: 1
+    action: "Tamaño del modelo fuera del gate."
+manual_checks:
+  prohibited_use:
+    owner: Operator
+    frequency: semanal
+    severity: STOP
+    runbook_step: 2
+    question: "¿Se usó el puntaje para elegibilidad, intervención automática o declaración de emergencia?"
+    evidence: "Registro de revisión del operador (acuerdo o desacuerdo por caso)."
+  appeals_overdue:
+    owner: Product Owner
+    frequency: semanal
+    severity: REVIEW
+    runbook_step: 4
+    question: "¿Hay apelaciones sin respuesta humana pasados 10 días hábiles (plazo propuesto)?"
+    evidence: "Registro de apelaciones."
+  review_agreement:
+    owner: Operator
+    frequency: semanal
+    severity: WATCH
+    runbook_step: 1
+    question: "¿El operador anula o discrepa del puntaje con frecuencia inusual? (señal de sobreconfianza o de pérdida de validez)"
+    evidence: "Registro de revisión del operador."

@@ -20,5 +20,10 @@ def temporal_split(df, test_fraction=.25):
     cut = int(len(df) * (1-test_fraction))
     return df.iloc[:cut].copy(), df.iloc[cut:].copy()
 
-def features(df):
-    return df[["zone","age_band","previous_incidents","infrastructure_score","exposure"]]
+FEATURE_COLUMNS = ["zone","age_band","previous_incidents","infrastructure_score","exposure"]
+
+def features(df, drop=()):
+    """Predictores del modelo. `drop` quita columnas (E08: age_band, por minimización)."""
+    unknown = set(drop) - set(FEATURE_COLUMNS)
+    if unknown: raise ValueError(f"Columnas desconocidas en drop: {sorted(unknown)}")
+    return df[[c for c in FEATURE_COLUMNS if c not in set(drop)]]
