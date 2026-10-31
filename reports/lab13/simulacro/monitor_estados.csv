@@ -1,0 +1,4 @@
+scenario,status,n_window,n_cumulative,signals_review_or_stop,signals_sin_evidencia
+A_operacion_normal,REVIEW,80,80,1,2
+B_sin_falla,GO,80,160,0,0
+C_con_falla,REVIEW,80,160,5,0

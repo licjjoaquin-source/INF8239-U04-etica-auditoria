@@ -1,0 +1,36 @@
+{
+  "n_rows": 640,
+  "n_columns": 9,
+  "columns": [
+    "case_id",
+    "received_date",
+    "zone",
+    "protected_group",
+    "age_band",
+    "previous_incidents",
+    "infrastructure_score",
+    "exposure",
+    "target"
+  ],
+  "date_min": "2026-01-01",
+  "date_max": "2026-12-27",
+  "duplicated_case_id": 0,
+  "missing_cells": 0,
+  "direct_identifier_columns_found": [],
+  "target_rate": 0.5516,
+  "n_train": 480,
+  "n_test": 160,
+  "test_start": "2026-09-25",
+  "groups": {
+    "G1": {
+      "n": 396,
+      "target_rate": 0.4975
+    },
+    "G2": {
+      "n": 244,
+      "target_rate": 0.6393
+    }
+  },
+  "data_sha256": "511809a96d070d73ae3de649df0b4771a95c652644294ee8ca44be95dad12d46",
+  "data_sha256_note": "Hash SHA-256 con los saltos de línea normalizados a LF (igual en Windows y Linux)."
+}

@@ -1,0 +1,6 @@
+cuasi_identificadores,grupos,k_minimo,filas_en_grupos_menores_a_5,porcentaje_filas_menores_a_5
+zona + edad + grupo,32,9,0,0.0
+zona + edad + grupo + fecha exacta,634,1,640,100.0
+zona + edad + grupo + mes,301,1,595,93.0
+zona + edad + grupo + trimestre,126,1,161,25.2
+zona + edad + grupo + año,32,9,0,0.0

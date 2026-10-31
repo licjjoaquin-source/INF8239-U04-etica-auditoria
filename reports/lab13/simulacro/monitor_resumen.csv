@@ -1,0 +1,34 @@
+scenario,signal,value,threshold,status,owner,runbook_step,detail
+A_operacion_normal,data_contract,0.0,0,OK,Data Engineer,2,columnas requeridas presentes y sin identificadores directos
+A_operacion_normal,drift_psi:previous_incidents,0.1129,watch 0.1 / alert 0.25,WATCH,ML Engineer,1,
+A_operacion_normal,drift_psi:infrastructure_score,0.0855,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+A_operacion_normal,drift_psi:exposure,0.0555,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+A_operacion_normal,drift_psi:zone,0.0434,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+A_operacion_normal,zero_share_shift:previous_incidents,-0.0479,cambio absoluto < 0.15,OK,Data Engineer,1,"proporción de ceros: referencia 0.060, ahora 0.013"
+A_operacion_normal,recall,0.6596,>= 0.68,REVIEW,Data Scientist,1,IC 95 % del recall 0.52 a 0.78 con 47 positivos; un valor puntual bajo con IC amplio puede ser ruido
+A_operacion_normal,recall_gap,,<= 0.16,SIN_EVIDENCIA,Data Scientist,1,algún grupo no alcanza el soporte mínimo; no se interpreta la brecha
+A_operacion_normal,fpr_gap,,<= 0.16,SIN_EVIDENCIA,Data Scientist,1,algún grupo no alcanza el soporte mínimo; no se interpreta la brecha
+A_operacion_normal,latency_ms,0.0173,<= 500,OK,ML Engineer,1,
+A_operacion_normal,model_kb,3.2822,<= 1024,OK,ML Engineer,1,
+B_sin_falla,data_contract,0.0,0,OK,Data Engineer,2,columnas requeridas presentes y sin identificadores directos
+B_sin_falla,drift_psi:previous_incidents,0.0719,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+B_sin_falla,drift_psi:infrastructure_score,0.0078,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+B_sin_falla,drift_psi:exposure,0.0609,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+B_sin_falla,drift_psi:zone,0.0339,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+B_sin_falla,zero_share_shift:previous_incidents,-0.0604,cambio absoluto < 0.15,OK,Data Engineer,1,"proporción de ceros: referencia 0.060, ahora 0.000"
+B_sin_falla,recall,0.7174,>= 0.68,OK,Data Scientist,1,IC 95 % del recall 0.62 a 0.80 con 92 positivos; un valor puntual bajo con IC amplio puede ser ruido
+B_sin_falla,recall_gap,0.1376,<= 0.16,OK,Data Scientist,1,
+B_sin_falla,fpr_gap,0.1442,<= 0.16,OK,Data Scientist,1,
+B_sin_falla,latency_ms,0.0173,<= 500,OK,ML Engineer,1,
+B_sin_falla,model_kb,3.2822,<= 1024,OK,ML Engineer,1,
+C_con_falla,data_contract,0.0,0,OK,Data Engineer,2,columnas requeridas presentes y sin identificadores directos
+C_con_falla,drift_psi:previous_incidents,0.2809,watch 0.1 / alert 0.25,REVIEW,ML Engineer,1,
+C_con_falla,drift_psi:infrastructure_score,0.0078,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+C_con_falla,drift_psi:exposure,0.0609,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+C_con_falla,drift_psi:zone,0.0339,watch 0.1 / alert 0.25,OK,ML Engineer,1,
+C_con_falla,zero_share_shift:previous_incidents,0.2646,cambio absoluto < 0.15,REVIEW,Data Engineer,1,"proporción de ceros: referencia 0.060, ahora 0.325"
+C_con_falla,recall,0.5761,>= 0.68,REVIEW,Data Scientist,1,IC 95 % del recall 0.47 a 0.67 con 92 positivos; un valor puntual bajo con IC amplio puede ser ruido
+C_con_falla,recall_gap,0.1647,<= 0.16,REVIEW,Data Scientist,1,
+C_con_falla,fpr_gap,0.1683,<= 0.16,REVIEW,Data Scientist,1,
+C_con_falla,latency_ms,0.0173,<= 500,OK,ML Engineer,1,
+C_con_falla,model_kb,3.2822,<= 1024,OK,ML Engineer,1,

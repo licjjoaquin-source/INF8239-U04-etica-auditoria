@@ -1,0 +1,5 @@
+feature,kind,psi,status
+previous_incidents,numeric,0.280919283131022,ALERT
+infrastructure_score,numeric,0.007847399993947731,OK
+exposure,numeric,0.060874607116803627,OK
+zone,categorical,0.03392234081939429,OK

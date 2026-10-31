@@ -1,0 +1,46 @@
+{
+  "data/territorial_risk_synthetic.csv": {
+    "sha256": "511809a96d070d73ae3de649df0b4771a95c652644294ee8ca44be95dad12d46",
+    "bytes": 34284
+  },
+  "configs/governance.yml": {
+    "sha256": "05037b0170ad7c4047d41b263dca1c21c298e06ba5a43d5eacf2eb3edb75b113",
+    "bytes": 414
+  },
+  "configs/monitoring.yml": {
+    "sha256": "60beb153c7ec4a54fd0ad79081f42edcded0ff1faa3a4223ef5a91a27ff15051",
+    "bytes": 3691
+  },
+  "student_inputs/lab12_decision.yml": {
+    "sha256": "ee9f728235334e600df8671537e7338304f8437724d10e49918479eaee603162",
+    "bytes": 1831
+  },
+  "student_inputs/raci.csv": {
+    "sha256": "ebeb8a530fa71015fbc5e46f34ce7a29cc864e64a4d386814f2f4d1a07bc2d1b",
+    "bytes": 1167
+  },
+  "reports/lab13/simulacro/model_snapshot.joblib": {
+    "sha256": "53b250fa700fe14468cdd4b0d88cf97943482fb22290ece769289ab04bdae86b",
+    "bytes": 3361
+  },
+  "reports/lab13/simulacro/monitor_resumen.csv": {
+    "sha256": "b5cf8a83139aa31cfe03c968f0919cdb96d6983139f3fcf626396377ecca41fa",
+    "bytes": 3283
+  },
+  "reports/lab13/simulacro/monitor_estados.csv": {
+    "sha256": "01ce8394a61e8a9a9189f0aa540b627280f3995e753f897970cf9ce8b18c56ec",
+    "bytes": 179
+  },
+  "reports/lab13/simulacro/ventana_con_falla.csv": {
+    "sha256": "f9371b301e3c3a4ae1968afff1609e0256202e0dcbae087ea9bf81968eece7b3",
+    "bytes": 4722
+  },
+  "reports/lab13/simulacro/deriva_con_falla.csv": {
+    "sha256": "3b52719e6da2fedc20ddb1b851faee7abf553999167089794adc33fc9815a4fe",
+    "bytes": 214
+  },
+  "reports/lab13/simulacro/safe_mode.json": {
+    "sha256": "54c13ecbb2891fbf412338d48c82b99f15d4c2211f53953b8204c0cabedd90a7",
+    "bytes": 426
+  }
+}

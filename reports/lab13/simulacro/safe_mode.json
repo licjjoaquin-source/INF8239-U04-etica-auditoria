@@ -1,0 +1,12 @@
+{
+  "status": "REVIEW",
+  "mode": "baseline_manual_fifo",
+  "model_disabled": "logistic_sin_age",
+  "set_at_utc": "2026-10-31T17:47:23+00:00",
+  "set_by_role": "ML Engineer",
+  "lifted_by_role_required": "Institutional Owner",
+  "baseline": "Revisión humana por orden de llegada, sin puntaje",
+  "review_capacity_fraction": 0.525,
+  "expected_recall_model": 0.7174,
+  "expected_recall_fifo_same_capacity": 0.5326
+}

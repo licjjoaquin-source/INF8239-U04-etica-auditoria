@@ -1,0 +1,49 @@
+{
+  "selected_model": "logistic_sin_age",
+  "fault": {
+    "group": "G2",
+    "column": "previous_incidents",
+    "value": 0,
+    "injected": true
+  },
+  "status_by_scenario": {
+    "A_operacion_normal": "REVIEW",
+    "B_sin_falla": "GO",
+    "C_con_falla": "REVIEW"
+  },
+  "fault_detected": true,
+  "false_alarm_in_control": false,
+  "reconciliation": {
+    "recall_acumulado_B": 0.717391304347826,
+    "recall_conjunto_de_prueba": 0.717391304347826,
+    "coincide": true,
+    "recall_e07": 0.717391304347826,
+    "coincide_con_e07": true
+  },
+  "first_signal": "drift_psi:previous_incidents, zero_share_shift:previous_incidents",
+  "impact": {
+    "cases_in_window": 80,
+    "cases_from_faulty_source": 26,
+    "predictions_changed_by_fault": 18,
+    "positives_in_faulty_source": 15,
+    "positives_not_prioritized_with_fault": 14,
+    "positives_not_prioritized_without_fault": 1
+  },
+  "safe_mode": {
+    "status": "REVIEW",
+    "mode": "baseline_manual_fifo",
+    "model_disabled": "logistic_sin_age",
+    "set_at_utc": "2026-10-31T17:47:23+00:00",
+    "set_by_role": "ML Engineer",
+    "lifted_by_role_required": "Institutional Owner",
+    "baseline": "Revisión humana por orden de llegada, sin puntaje",
+    "review_capacity_fraction": 0.525,
+    "expected_recall_model": 0.7174,
+    "expected_recall_fifo_same_capacity": 0.5326
+  },
+  "evidence_files": 11,
+  "manifest_verified": true,
+  "recovered_window_status": "GO",
+  "recovered": true,
+  "n_signals_review_or_stop_with_fault": 5
+}

@@ -1,0 +1,9 @@
+utc,elapsed_s,step,role,automated,detail
+2026-10-31T17:47:23+00:00,0.05,0 línea base,ML Engineer,True,"modelo logistic_sin_age entrenado con 480 casos; ventanas A=80, B=80"
+2026-10-31T17:47:23+00:00,0.07,1 detección,ML Engineer,True,monitoreo en C_con_falla: 5 señal(es) REVIEW/STOP; la primera ventana con falla ya dispara la alerta
+2026-10-31T17:47:23+00:00,0.07,2 contención,ML Engineer,True,modelo deshabilitado; modo baseline_manual_fifo; el Institutional Owner debe autorizar la reanudación
+2026-10-31T17:47:23+00:00,0.09,3 evidencia,Operator,True,11 archivos con SHA-256; verificación inmediata sin cambios: True
+2026-10-31T17:47:23+00:00,0.09,4 comunicación,Product Owner,False,borradores interno y externo preparados; pendientes de aprobación humana
+2026-10-31T17:47:23+00:00,0.1,5 impacto,Data Scientist,True,18 predicciones cambiaron por la falla; positivos no priorizados en la fuente afectada: 14 (sin falla: 1)
+2026-10-31T17:47:23+00:00,0.1,6 reversión,ML Engineer,True,línea base manual: recall esperado 0.533 con la misma capacidad frente a 0.717 del modelo
+2026-10-31T17:47:23+00:00,0.1,7 recuperación,Data Engineer,True,ventana B con la fuente corregida: estado GO; falta una segunda evaluación limpia y la firma del Institutional Owner
