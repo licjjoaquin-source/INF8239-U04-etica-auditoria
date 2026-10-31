@@ -1,0 +1,33 @@
+{
+  "groups": {
+    "reference": "G1",
+    "compared": "G2"
+  },
+  "gates": {
+    "min_recall": 0.68,
+    "max_recall_gap": 0.16,
+    "max_fpr_gap": 0.16,
+    "max_latency_ms": 500,
+    "max_model_kb": 1024
+  },
+  "min_n": 20,
+  "min_positives": 10,
+  "min_negatives": 10,
+  "n_boot": 2000,
+  "seed": 42,
+  "sensitive_features_used_as_predictors": [
+    "age_band"
+  ],
+  "reconciled_with_lab12": {
+    "logistic": true,
+    "tree": true
+  },
+  "figures": [
+    "e07_brechas_ic.png",
+    "e07_utilidad_vs_brecha.png"
+  ],
+  "intersectional_cells": 8,
+  "intersectional_cells_with_support": 2,
+  "python": "3.12.13",
+  "scikit_learn": "1.9.1"
+}

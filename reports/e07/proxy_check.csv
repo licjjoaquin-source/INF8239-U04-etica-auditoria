@@ -1,0 +1,5 @@
+check,value
+Cramer V: zone ~ protected_group,0.03861478091841727
+Cramer V: age_band ~ protected_group,0.024710725061160746
+Exactitud (CV 5) al predecir protected_group con los predictores,0.6640625
+Exactitud de referencia (clase mayoritaria),0.61875

@@ -1,0 +1,5 @@
+stakeholder,benefit,harm,power,participation
+Affected person,Que un caso que necesita atención sea visto antes,"Que un caso real no sea priorizado (falso negativo) o que sea revisado de más y estigmatizado (falso positivo, más frecuente en G2)",low,Representantes de las personas afectadas son consultados (C/I en el RACI) y pueden apelar la priorización
+Operator,Orden de trabajo más claro y menos tiempo en casos de bajo riesgo,Sobreconfianza en el puntaje o carga de revisión innecesaria si hay muchos falsos positivos,medium,"Revisa cada caso, registra acuerdo o desacuerdo con la recomendación y puede anularla"
+Institutional owner,Uso más eficiente de recursos de revisión,Responsabilidad institucional y reputacional si el sistema se usa fuera de alcance o produce brechas no detectadas,high,"Aprueba el uso, define usos prohibidos y es el único Accountable de la respuesta a incidentes"
+Data team,Pipeline reproducible y auditable,Presión por declarar equidad con muestras pequeñas; exposición a datos sensibles si se usaran datos reales,medium,"Valida el modelo, documenta límites y reporta brechas con incertidumbre"
