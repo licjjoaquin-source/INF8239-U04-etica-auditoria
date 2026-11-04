@@ -21,14 +21,22 @@ En el texto consultado de la Ley 172-13 no encontré un principio explícito que
 
 ## Plazos propuestos
 
-| Activo | Plazo | Responsable de eliminar |
+Cada plazo es **un valor único con su fecha de inicio**: no hay intervalos ni alternativas («o»). Todos son propuestas de la autora, no plazos legales.
+
+| Activo | Plazo propuesto | Responsable de eliminar |
 |---|---|---|
-| Registros de casos (datos reales) | Mientras exista el caso y su apelación posible; luego se eliminan o se agregan | Data Engineer |
-| Tablas de auditoría agregadas | 24 meses | Data Scientist |
-| Modelo y decisión de puertas | Mientras la versión esté en uso y 12 a 24 meses después, para poder auditar | ML Engineer, Product Owner |
-| Registro de revisión del operador | 12 meses | Operator |
-| Registro de apelaciones | 24 meses | Institutional Owner |
-| Evidencia de incidentes (con hashes) | 36 meses o hasta cerrar el postmortem y sus acciones | Institutional Owner |
+| Registros de casos (datos reales) | 12 meses desde el cierre del caso y de su apelación; luego se eliminan | Data Engineer |
+| Tablas de auditoría agregadas | 24 meses desde su generación | Data Scientist |
+| Modelo elegido (`models/logistic_sin_age.joblib`) | 12 meses desde que se retira de uso la versión | ML Engineer |
+| Decisión de puertas (`reports/lab13/deployment_decision.json`) | 24 meses desde que se retira de uso la versión que describe | Product Owner |
+| Registro de revisión del operador | 12 meses desde la fecha del registro | Operator |
+| Registro de apelaciones | 24 meses desde el cierre de la apelación | Institutional Owner |
+| Evidencia de incidentes (con hashes) | 36 meses desde el cierre del postmortem y de sus acciones | Institutional Owner |
+
+Notas:
+- Los agregados que se derivan de los registros de casos antes de eliminarlos siguen la fila de las tablas de auditoría (24 meses desde su generación); no contienen casos.
+- La evidencia de incidentes se limita a las columnas necesarias y no es una copia completa del registro del caso; por eso puede conservarse más tiempo (36 meses) que el registro de casos (12 meses).
+- El registro de apelaciones guarda solo la clave del caso, fechas y resultado.
 
 ## Eliminación
 
